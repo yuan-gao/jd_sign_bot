@@ -73,4 +73,14 @@ async function start() {
   }
 }
 
-start()
+var randomNum = Math.ceil(Math.random()*30);
+var time = randomNum*60*1000
+console.log('延迟到'+time+'分钟后执行')
+// 用法
+sleep(time).then(() => {
+    // 这里写sleep之后需要去做的事情
+    start()
+})
+
+
+
