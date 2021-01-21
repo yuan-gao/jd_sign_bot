@@ -73,9 +73,13 @@ async function start() {
   }
 }
 
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
 var randomNum = Math.ceil(Math.random()*30);
 var time = randomNum*60*1000
-console.log('延迟到'+time+'分钟后执行')
+console.log('延迟到'+randomNum+'分钟后执行')
 // 用法
 sleep(time).then(() => {
     // 这里写sleep之后需要去做的事情
